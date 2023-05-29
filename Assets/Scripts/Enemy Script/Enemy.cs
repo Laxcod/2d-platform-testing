@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public float healthPoints;
     public float speed;
-
-
+    public float knockbackForceX;
+    public float knockbackForceY;
+    public float damageToGive;
 }

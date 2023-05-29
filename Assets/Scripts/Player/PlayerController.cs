@@ -13,41 +13,27 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     Animator anim;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-
     void Update()
     {
-        FlipCharacter();
-        Attack();
-
         isGrounded = Physics2D.OverlapCircle(groundcheck.position, groundCheckRadius, whatIsGround);
         if (isGrounded)
         {
             anim.SetBool("Jump", false);
         }
-        else 
+        else
         {
             anim.SetBool("Jump", true);
         }
 
+        FlipCharacter();
+        Attack();
     }
-
-
-    public void Jump()
-    {
-        if (Input.GetButton("Jump") && isGrounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-        }
-    }
-
-
 
     private void FixedUpdate()
     {
@@ -57,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             anim.SetBool("Attack", true);
         }
@@ -67,6 +53,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Jump()
+    {
+        if (Input.GetButton("Jump") && isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        }
+    }
 
     public void Movement()
     {
@@ -82,7 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
-    } 
+    }
 
     public void FlipCharacter()
     {
@@ -90,7 +83,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-
         else if (rb.velocity.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
