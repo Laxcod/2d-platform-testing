@@ -8,7 +8,6 @@ public class EnemyMovements : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
 
-
     public bool isStatic;
     public bool isWalker;
     public bool isPatrol;
@@ -24,7 +23,6 @@ public class EnemyMovements : MonoBehaviour
 
     public Transform pointA, pointB;
     bool goToA, goToB;
-
 
     // Start is called before the first frame update
     void Start()
@@ -48,13 +46,14 @@ public class EnemyMovements : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
         if(isStatic)
         {
             anim.SetBool("Idle", true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
+
         if(isWalker)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -69,9 +68,9 @@ public class EnemyMovements : MonoBehaviour
                 rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
             }
         }
+
         if(isPatrol)
         {
-            
             if(goToA)
             {
                 if(!isWaiting)
@@ -80,14 +79,11 @@ public class EnemyMovements : MonoBehaviour
                     rb.velocity = new Vector2 (-speed * Time.deltaTime, rb.velocity.y);
                 }
 
-                
-
                 if(Vector2.Distance(transform.position,  pointA.position)< 0.2f)
                 {
-                    
                     if(shoudlWait)
                     {
-                       StartCoroutine(Waiting());   
+                        StartCoroutine(Waiting());
                     }
 
                     Flip();
@@ -108,7 +104,7 @@ public class EnemyMovements : MonoBehaviour
                 {
                     if(shoudlWait)
                     {
-                        StartCoroutine(Waiting()); 
+                        StartCoroutine(Waiting());
                     }
 
                     Flip();
@@ -129,7 +125,6 @@ public class EnemyMovements : MonoBehaviour
         anim.SetBool("Idle", false);
         Flip();
     }
-
 
     public void Flip()
     {
