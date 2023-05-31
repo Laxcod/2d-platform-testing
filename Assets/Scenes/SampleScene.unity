@@ -601,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804439979940, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: healthPoints
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804439979998, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2721,7 +2721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804439979940, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: healthPoints
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804439979998, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2785,7 +2785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8431961227775319025, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: isStatic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8431961227775319025, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: isWalker
@@ -3152,7 +3152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804439979940, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: healthPoints
-      value: 50
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840816804439979996, guid: d432aedd410cadb4e980d598c667f799, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804640514743, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: m_Name
@@ -3200,6 +3204,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840816804640514744, guid: d432aedd410cadb4e980d598c667f799, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092534081008209340, guid: d432aedd410cadb4e980d598c667f799, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265692777291241147, guid: d432aedd410cadb4e980d598c667f799, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7227317155284842434, guid: d432aedd410cadb4e980d598c667f799, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8431961227775319025, guid: d432aedd410cadb4e980d598c667f799, type: 3}

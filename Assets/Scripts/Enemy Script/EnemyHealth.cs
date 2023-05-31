@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.CompareTag("Weapon") && !isDamaged)
         {
-            enemy.healthPoints -= 1f;
+            enemy.healthPoints -= 2f;
             if(collision.transform.position.x < transform.position.x)
             {
                 rb.AddForce (new Vector2(enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
