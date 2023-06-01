@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-    public Image healthImg;
+    // public Image healthImg;
     bool isImune;
     public float imunityTime;
     Blink material;
@@ -15,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public float knockbackForceX;
     public float knockbackForceY;
     Rigidbody2D rb;
+    public static event Action OnPlayerDamaged;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        healthImg.fillAmount = health / 100;
+        // healthImg.fillAmount = health / 100;
         if(health > maxHealth)
         {
             health = maxHealth;
@@ -40,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
         if(collision.CompareTag("Enemy") && !isImune)
         {
             health -= collision.GetComponent<Enemy>().damageToGive;
+            OnPlayerDamaged?.Invoke();
             StartCoroutine(Imunity());
 
             if(collision.transform.position.x > transform.position.x)
@@ -63,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
     {
         isImune = true;
         sprite.material = material.blink;
-        yield return new WaitForSeconds(imunityTime);
+        yield return new WaitForSeconds(2);
         sprite.material = material.original;
         isImune = false;
     }
