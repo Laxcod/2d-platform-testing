@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health;
+    public float currentHealth;
     public float maxHealth;
-    // public Image healthImg;
     bool isImune;
     public float imunityTime;
     Blink material;
@@ -17,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public float knockbackForceY;
     Rigidbody2D rb;
     public static event Action OnPlayerDamaged;
+    public static event Action OnHealed;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +24,15 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         material = GetComponent<Blink>();
-        health = maxHealth;
+        currentHealth = maxHealth;
         material.original = sprite.material;
     }
 
     private void Update()
     {
-        // healthImg.fillAmount = health / 100;
-        if(health > maxHealth)
+        if(currentHealth > maxHealth)
         {
-            health = maxHealth;
+            currentHealth = maxHealth;
         }
     }
 
@@ -41,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.CompareTag("Enemy") && !isImune)
         {
-            health -= collision.GetComponent<Enemy>().damageToGive;
+            currentHealth = Mathf.Clamp(currentHealth - collision.GetComponent<Enemy>().damageToGive, 0, maxHealth);
             OnPlayerDamaged?.Invoke();
             StartCoroutine(Imunity());
 
@@ -54,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
                 rb.AddForce(new Vector2 (knockbackForceX, knockbackForceY), ForceMode2D.Force);
             }
 
-            if(health <= 0)
+            if(currentHealth <= 0)
             {
                 // game over
                 print("player dead");
@@ -62,11 +61,25 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void AddHealth()
+    {
+        if(currentHealth != maxHealth)
+        {
+            currentHealth += (float)HeartStatus.Full;
+            if(FindObjectOfType<HealthHeart>().emptyHeart || FindObjectOfType<HealthHeart>().halfHeart)
+            {
+                FindObjectOfType<HealthHeart>().SetHeartImage(HeartStatus.Full);
+            }
+            OnHealed?.Invoke();
+            Debug.Log(currentHealth);
+        }
+    }
+
     IEnumerator Imunity()
     {
         isImune = true;
         sprite.material = material.blink;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         sprite.material = material.original;
         isImune = false;
     }
