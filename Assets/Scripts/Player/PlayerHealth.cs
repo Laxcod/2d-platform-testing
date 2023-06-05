@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     Rigidbody2D rb;
     public static event Action OnPlayerDamaged;
     public static event Action OnHealed;
+    public static event Action OnPlayerDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -53,10 +54,12 @@ public class PlayerHealth : MonoBehaviour
                 rb.AddForce(new Vector2 (knockbackForceX, knockbackForceY), ForceMode2D.Force);
             }
 
+            // game over
             if(currentHealth <= 0)
             {
-                // game over
-                print("player dead");
+                currentHealth = 0;
+                Debug.Log("GAME OVER!");
+                OnPlayerDeath?.Invoke();
             }
         }
     }

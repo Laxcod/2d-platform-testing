@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class LoadingManager : MonoBehaviour
 {
-
     public static LoadingManager Instance;
 
     public GameObject LoadingPanel;
@@ -33,12 +32,10 @@ public class LoadingManager : MonoBehaviour
         FadeImage.gameObject.SetActive(false);
     }
 
-    
     public void LoadScene(string sceneName)
     {
         targetScene = sceneName;
         StartCoroutine(LoadSceneRoutine());
-
     }
 
     private IEnumerator LoadSceneRoutine()
@@ -80,6 +77,7 @@ public class LoadingManager : MonoBehaviour
             yield return null;
 
         isLoading = false;
+        FadeImage.gameObject.SetActive(false);
     }
 
     private bool Fade(float target)

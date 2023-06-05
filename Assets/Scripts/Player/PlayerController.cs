@@ -13,10 +13,21 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     Animator anim;
 
+    private void OnEnable()
+    {
+        PlayerHealth.OnPlayerDeath += DisablePlayerMove;
+    }
+
+    private void OnDisable()
+    {
+        PlayerHealth.OnPlayerDeath -= DisablePlayerMove;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        EnablePlayerMove();
     }
 
     void Update()
@@ -87,5 +98,17 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+    }
+
+    private void DisablePlayerMove()
+    {
+        anim.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void EnablePlayerMove()
+    {
+        anim.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 }
