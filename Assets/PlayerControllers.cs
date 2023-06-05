@@ -7,7 +7,7 @@ public class PlayerControllers : MonoBehaviour
 
     private float movementInputDirection;
 
-    private int amountOfJumpsLeft;
+    [SerializeField] int amountOfJumpsLeft;
 
     private bool isFacingRight = true;
     private bool isWalking;
@@ -17,7 +17,7 @@ public class PlayerControllers : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
-    private int amountOfJumps = 1;
+    [SerializeField] int amountOfJumps = 1;
 
     public float movementSpeed = 10.0f;
     public float jumpForce = 16.0f;
