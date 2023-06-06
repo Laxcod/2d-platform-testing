@@ -36,6 +36,7 @@ public class LoadingManager : MonoBehaviour
     {
         targetScene = sceneName;
         StartCoroutine(LoadSceneRoutine());
+        Time.timeScale = 1f;
     }
 
     private IEnumerator LoadSceneRoutine()
