@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
     public static bool isPaused;
+    public Image fadePanel;
+    private bool isFading;
+
 
     private void OnEnable()
     {
@@ -21,7 +25,38 @@ public class UIManager : MonoBehaviour
 
     public void EnableGameOver()
     {
+        StartCoroutine(GameOverRoutine());
+    }
+
+    private IEnumerator GameOverRoutine()
+    {
+        isFading = true;
+        fadePanel.gameObject.SetActive(true);
+        fadePanel.canvasRenderer.SetAlpha(0f);
+        fadePanel.CrossFadeAlpha(1f, 1f, true);
+        yield return new WaitForSeconds(1f);
+
+        fadePanel.canvasRenderer.SetAlpha(1f);
+
         gameOverMenu.SetActive(true);
+        yield return new WaitForSeconds(1f);
+
+        fadePanel.CrossFadeAlpha(0f, 1f, true);
+        yield return new WaitForSeconds(1f);
+
+        fadePanel.gameObject.SetActive(false);
+        isFading = false;
+
+        
+
+        //isFading = false;
+        //fadePanel.CrossFadeAlpha(0f, 1f, true);
+        //yield return new WaitForSeconds(1f);
+
+
+
+
+
     }
 
     public void RestartLevel()
@@ -41,7 +76,12 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (isFading)
+        {
+            fadePanel.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(isPaused)
             {
