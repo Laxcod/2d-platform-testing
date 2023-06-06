@@ -1552,6 +1552,37 @@ Transform:
   m_Father: {fileID: 1810204594}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &555282501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555282502}
+  m_Layer: 0
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555282502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555282501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1802175255}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &555531202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3375,6 +3406,7 @@ Transform:
   m_Children:
   - {fileID: 254050568}
   - {fileID: 969024269}
+  - {fileID: 555282502}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3510,7 +3542,12 @@ MonoBehaviour:
   movementSpeed: 3
   jumpForce: 10
   groundCheckRadius: 0.3
+  wallcheckDistance: 0.4
+  wallSlideSpeed: 0.1
+  movementForceInAir: 50
+  airDragMultiplier: 0.95
   groundCheck: {fileID: 254050568}
+  wallcheck: {fileID: 555282502}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
