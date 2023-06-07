@@ -7,9 +7,12 @@ public class PlayerControllers : MonoBehaviour
 
     private float movementInputDirection;
     private float jumpTimer;
+    private float turnTimer;
+    private float walljumpTimer;
 
     [SerializeField] int amountOfJumpsLeft;
     private int facingDirection = 1;
+    private int lastWallJumpDirection;
 
     private bool isFacingRight = true;
     private bool isWalking;
@@ -19,6 +22,10 @@ public class PlayerControllers : MonoBehaviour
     private bool canNormalJump;
     private bool canWallJump;
     private bool isAttemptingToJump;
+    private bool CheckJumpMultiplier;
+    private bool canMove;
+    private bool canFlip;
+    private bool hasWallJumped;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -36,6 +43,8 @@ public class PlayerControllers : MonoBehaviour
     public float wallHopForce;
     public float wallJumpForce;
     public float jumpTimerSet = 0.15f;
+    public float turnTimerSet = 0.1f;
+    public float walljumpTimerSet = 0.5f;
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -74,7 +83,7 @@ public class PlayerControllers : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if(isTouchingWall && movementInputDirection == facingDirection)
+        if(isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0)
         {
             isWallSliding = true;
         }
@@ -161,8 +170,31 @@ public class PlayerControllers : MonoBehaviour
             }
         }
 
-       if(Input.GetButtonDown("Jump"))     //error
+        if(Input.GetButtonDown("Horizontal") && isTouchingWall)
         {
+            if(!isGrounded && movementInputDirection != facingDirection)
+            {
+                canMove = false;
+                canFlip = false;
+
+                turnTimer = turnTimerSet; 
+            }
+        }
+
+        if (!canMove)
+        {
+            turnTimer -= Time.deltaTime;
+
+            if(turnTimer <= 0)
+            {
+                canMove = true;
+                canFlip = true;
+            }
+        }        
+
+       if(CheckJumpMultiplier && !Input.GetButton("Jump"))   
+        {
+            CheckJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpheightMultiplier);
         }
     }
@@ -188,6 +220,22 @@ public class PlayerControllers : MonoBehaviour
         {
             jumpTimer -= Time.deltaTime;
         }
+
+        if(walljumpTimer > 0)
+        {
+            if(hasWallJumped && movementInputDirection == -lastWallJumpDirection)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0.0f);
+                hasWallJumped = false;
+            }else if(walljumpTimer < 0)
+            {
+                hasWallJumped = false;
+            }
+            else
+            {
+                walljumpTimer -= Time.deltaTime;
+            }
+        }
     }
 
     private void NormalJump()
@@ -198,6 +246,7 @@ public class PlayerControllers : MonoBehaviour
             amountOfJumpsLeft--;
             jumpTimer = 0;
             isAttemptingToJump = false;
+            CheckJumpMultiplier = true;
         }
     }
 
@@ -214,6 +263,14 @@ public class PlayerControllers : MonoBehaviour
             rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             jumpTimer = 0;
             isAttemptingToJump = false;
+            CheckJumpMultiplier = true;
+            turnTimer = 0;
+            canMove = true;
+            canFlip = true;
+            hasWallJumped = true;
+            walljumpTimer = walljumpTimer;
+            lastWallJumpDirection = -facingDirection;
+
         }
     }
 
@@ -224,13 +281,13 @@ public class PlayerControllers : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-       else 
+       else if(canMove)
         {
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
         }
 
         
-        if(isWallSliding)  
+        if(isWallSliding && canFlip)  
         {
             if(rb.velocity.y < -wallSlideSpeed)
             {

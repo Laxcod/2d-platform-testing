@@ -3326,9 +3326,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1802175255}
   - component: {fileID: 1802175254}
+  - component: {fileID: 1802175263}
   - component: {fileID: 1802175256}
   - component: {fileID: 1802175258}
-  - component: {fileID: 1802175263}
   - component: {fileID: 1802175261}
   - component: {fileID: 1802175259}
   - component: {fileID: 1802175260}
@@ -3425,11 +3425,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 8
   m_Material: {fileID: 6200000, guid: 2866bb92fce434145b51dc41a1f4a601, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &1802175258
 CapsuleCollider2D:
@@ -3538,17 +3538,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfJumpsLeft: 0
-  amountOfJumps: 2
+  amountOfJumps: 1
   movementSpeed: 3
-  jumpForce: 10
+  jumpForce: 20
   groundCheckRadius: 0.3
-  wallcheckDistance: 0.4
-  wallSlideSpeed: 0.1
-  movementForceInAir: 20
+  wallcheckDistance: 0.65
+  wallSlideSpeed: 1
+  movementForceInAir: 50
   airDragMultiplier: 0.95
   variableJumpheightMultiplier: 0.5
-  wallHopForce: 0
-  wallJumpForce: 0
+  wallHopForce: 10
+  wallJumpForce: 30
+  jumpTimerSet: 0.15
+  turnTimerSet: 0.1
+  walljumpTimerSet: 0.5
   wallHopDirection: {x: 1, y: 0.5}
   wallJumpDirection: {x: 1, y: 2}
   groundCheck: {fileID: 254050568}
