@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnHealed;
     public static event Action OnPlayerDeath;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +27,6 @@ public class PlayerHealth : MonoBehaviour
         material = GetComponent<Blink>();
         currentHealth = maxHealth;
         material.original = sprite.material;
-
     }
 
     private void Update()
@@ -62,7 +60,6 @@ public class PlayerHealth : MonoBehaviour
                 currentHealth = 0;
                 Debug.Log("GAME OVER!");
                 OnPlayerDeath?.Invoke();
-                
             }
         }
     }
@@ -77,7 +74,6 @@ public class PlayerHealth : MonoBehaviour
                 FindObjectOfType<HealthHeart>().SetHeartImage(HeartStatus.Full);
             }
             OnHealed?.Invoke();
-            Debug.Log(currentHealth);
         }
     }
 

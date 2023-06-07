@@ -8,7 +8,6 @@ public class FlyingEnemy : MonoBehaviour
     public bool chase = false;
     public Transform startingPoint;
     private GameObject player;
-    
 
     private void Start()
     {
@@ -31,11 +30,7 @@ public class FlyingEnemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         if(Vector2.Distance(transform.position, player.transform.position) <= 0.5f)
         {
-
-        }
-        else
-        {
-
+            
         }
     }
 
