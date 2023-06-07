@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad8e0554a7cc7f74a9f2844d1a906ed6
+guid: 145fd25653df31b4c97869040ecaaa79
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mute
+      name: Player Run_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 643
-        width: 160
-        height: 36
+        x: 0
+        y: 0
+        width: 42
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ee5630df5cb4342921d80994a3c023
-      internalID: -332629522
+      spriteID: 33b3eb3ce6964224da30a5c83632b508
+      internalID: 862297611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BGM
+      name: Player Run_1
       rect:
         serializedVersion: 2
-        x: 282
-        y: 643
-        width: 123
-        height: 39
+        x: 57
+        y: 0
+        width: 36
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93f8627c620b87843915f14b34dead6e
-      internalID: 375759783
+      spriteID: 26d35c1232c025b4d828d03f00118a09
+      internalID: 1800487784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SFX
+      name: Player Run_2
       rect:
         serializedVersion: 2
-        x: 489
-        y: 640
-        width: 117
-        height: 39
+        x: 96
+        y: 0
+        width: 39
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d564ef64686418439c08ea60fd6ebeb
-      internalID: -673171171
+      spriteID: 37f23b7dc372bab4f99c8497af83c7c4
+      internalID: -1875778742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slider_1
+      name: Player Run_3
       rect:
         serializedVersion: 2
-        x: 273
-        y: 610
-        width: 378
-        height: 24
+        x: 147
+        y: 0
+        width: 39
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddf4192e40b831a4f96f4d69b126fdd8
-      internalID: -937306411
+      spriteID: e21f316268652cd4ebb0d94d804d6167
+      internalID: 311481950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slider_2
+      name: Player Run_4
       rect:
         serializedVersion: 2
-        x: 279
-        y: 592
-        width: 366
-        height: 12
+        x: 201
+        y: 0
+        width: 36
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,71 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d622f1f584abf86439615d83ac7c1138
-      internalID: 346276620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_0
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 562
-        width: 72
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b21b252a5ec54f94d80584222645a006
-      internalID: 101342177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_1
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 475
-        width: 84
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d79671ce9a771574d9df47742fff0126
-      internalID: 1472528187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_2
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 7
-        width: 638
-        height: 566
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e7909a853a9a924bb9da7bb23a6f5bb
-      internalID: -1898903472
+      spriteID: fa1f674e1cd0e1741951a32d93aae9c5
+      internalID: 422307862
       vertices: []
       indices: 
       edges: []
@@ -307,14 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BGM: 375759783
-      Mute: -332629522
-      SFX: -673171171
-      SettingsBox_0: 101342177
-      SettingsBox_1: 1472528187
-      SettingsBox_2: -1898903472
-      slider_1: -937306411
-      slider_2: 346276620
+      Player Run_0: 862297611
+      Player Run_1: 1800487784
+      Player Run_2: -1875778742
+      Player Run_3: 311481950
+      Player Run_4: 422307862
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

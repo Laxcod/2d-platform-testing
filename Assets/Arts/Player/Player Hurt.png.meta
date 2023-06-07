@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad8e0554a7cc7f74a9f2844d1a906ed6
+guid: 4e6e0ac055b4a0b42ba3ab961bf776a1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mute
+      name: Player Hurt_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 643
-        width: 160
-        height: 36
+        x: 15
+        y: 0
+        width: 45
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,155 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ee5630df5cb4342921d80994a3c023
-      internalID: -332629522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BGM
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 643
-        width: 123
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93f8627c620b87843915f14b34dead6e
-      internalID: 375759783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SFX
-      rect:
-        serializedVersion: 2
-        x: 489
-        y: 640
-        width: 117
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d564ef64686418439c08ea60fd6ebeb
-      internalID: -673171171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slider_1
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 610
-        width: 378
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddf4192e40b831a4f96f4d69b126fdd8
-      internalID: -937306411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slider_2
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 592
-        width: 366
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d622f1f584abf86439615d83ac7c1138
-      internalID: 346276620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_0
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 562
-        width: 72
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b21b252a5ec54f94d80584222645a006
-      internalID: 101342177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_1
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 475
-        width: 84
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d79671ce9a771574d9df47742fff0126
-      internalID: 1472528187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_2
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 7
-        width: 638
-        height: 566
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e7909a853a9a924bb9da7bb23a6f5bb
-      internalID: -1898903472
+      spriteID: b6ee05daae5f4534db1d6a4855bc5a6c
+      internalID: 700593945
       vertices: []
       indices: 
       edges: []
@@ -307,14 +160,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BGM: 375759783
-      Mute: -332629522
-      SFX: -673171171
-      SettingsBox_0: 101342177
-      SettingsBox_1: 1472528187
-      SettingsBox_2: -1898903472
-      slider_1: -937306411
-      slider_2: 346276620
+      Player Hurt_0: 700593945
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

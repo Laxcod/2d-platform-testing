@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad8e0554a7cc7f74a9f2844d1a906ed6
+guid: 39efa9d2e6245254281b42684a9bd164
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mute
+      name: Player Dead_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 643
-        width: 160
-        height: 36
+        x: 48
+        y: 0
+        width: 45
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ee5630df5cb4342921d80994a3c023
-      internalID: -332629522
+      spriteID: ea16c357a2e3f19429a4f5301e89abf0
+      internalID: -274982617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BGM
+      name: Player Dead_1
       rect:
         serializedVersion: 2
-        x: 282
-        y: 643
-        width: 123
-        height: 39
+        x: 160
+        y: 0
+        width: 51
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,82 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93f8627c620b87843915f14b34dead6e
-      internalID: 375759783
+      spriteID: 2b0451ece77207949a740b675c965762
+      internalID: -224491092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SFX
+      name: Player Dead_2
       rect:
         serializedVersion: 2
-        x: 489
-        y: 640
-        width: 117
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d564ef64686418439c08ea60fd6ebeb
-      internalID: -673171171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slider_1
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 610
-        width: 378
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddf4192e40b831a4f96f4d69b126fdd8
-      internalID: -937306411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slider_2
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 592
-        width: 366
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d622f1f584abf86439615d83ac7c1138
-      internalID: 346276620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SettingsBox_0
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 562
-        width: 72
+        x: 248
+        y: 9
+        width: 60
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -248,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b21b252a5ec54f94d80584222645a006
-      internalID: 101342177
+      spriteID: c292bace40a274b47843753564761bbf
+      internalID: 1704804117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingsBox_1
+      name: Player Dead_3
       rect:
         serializedVersion: 2
-        x: 660
-        y: 475
-        width: 84
-        height: 72
+        x: 348
+        y: 12
+        width: 66
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d79671ce9a771574d9df47742fff0126
-      internalID: 1472528187
+      spriteID: e28cb936d7efd26498ec34c18a42a601
+      internalID: 639398726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingsBox_2
+      name: Player Dead_4
       rect:
         serializedVersion: 2
-        x: 14
-        y: 7
-        width: 638
-        height: 566
+        x: 466
+        y: 0
+        width: 66
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,8 +227,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e7909a853a9a924bb9da7bb23a6f5bb
-      internalID: -1898903472
+      spriteID: 87132d5f1bc3cca4888c18f2c3b16f44
+      internalID: -1391052987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dead_5
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 66
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811f10aafc95d7f4d84d6d2e0c40155f
+      internalID: 429487374
       vertices: []
       indices: 
       edges: []
@@ -307,14 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BGM: 375759783
-      Mute: -332629522
-      SFX: -673171171
-      SettingsBox_0: 101342177
-      SettingsBox_1: 1472528187
-      SettingsBox_2: -1898903472
-      slider_1: -937306411
-      slider_2: 346276620
+      Player Dead_0: -274982617
+      Player Dead_1: -224491092
+      Player Dead_2: 1704804117
+      Player Dead_3: 639398726
+      Player Dead_4: -1391052987
+      Player Dead_5: 429487374
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
