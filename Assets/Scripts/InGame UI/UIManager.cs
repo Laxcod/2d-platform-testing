@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     public Image fadePanel;
     private bool isFading;
 
-
     private void OnEnable()
     {
         PlayerHealth.OnPlayerDeath += EnableGameOver;
@@ -47,16 +46,9 @@ public class UIManager : MonoBehaviour
         fadePanel.gameObject.SetActive(false);
         isFading = false;
 
-
-
         //isFading = false;
         //fadePanel.CrossFadeAlpha(0f, 1f, true);
         //yield return new WaitForSeconds(1f);
-
-
-
-
-
     }
 
     public void RestartLevel()

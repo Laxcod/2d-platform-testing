@@ -30,4 +30,3 @@ public class GameOverMenu : MonoBehaviour
         canvasGroup.alpha = 1f;
     }
 }
-
