@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
         fadePanel.gameObject.SetActive(false);
         isFading = false;
 
-        
+
 
         //isFading = false;
         //fadePanel.CrossFadeAlpha(0f, 1f, true);
@@ -83,7 +83,7 @@ public class UIManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isPaused)
+            if (isPaused)
             {
                 ResumeGame();
             }
