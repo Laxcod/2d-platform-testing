@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     public static bool isPaused;
     public Image fadePanel;
     private bool isFading;
-
     private void OnEnable()
     {
         PlayerHealth.OnPlayerDeath += EnableGameOver;
