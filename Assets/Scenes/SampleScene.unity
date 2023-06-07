@@ -3544,7 +3544,7 @@ MonoBehaviour:
   groundCheckRadius: 0.3
   wallcheckDistance: 0.4
   wallSlideSpeed: 0.1
-  movementForceInAir: 50
+  movementForceInAir: 20
   airDragMultiplier: 0.95
   variableJumpheightMultiplier: 0.5
   wallHopForce: 0
