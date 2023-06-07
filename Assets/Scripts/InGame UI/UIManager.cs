@@ -13,8 +13,10 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
     public static bool isPaused;
+    public PlayerHealth ph;
 
-    public bool GameActive = false;
+    public bool isGameover;
+    public bool TimerActive = false;
     private bool finished = false;
     float s;
     
@@ -71,33 +73,31 @@ public class UIManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
     }
 
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+    //public void MainMenu()
+    //{
+    //    SceneManager.LoadScene("MainMenu");
+    //}
 
     private void Start()
     {
+        TimerActive = true;
         pauseMenu.SetActive(false);
     }
 
     private void Update()
     {
-
-        GameActive = true;
-
         if (isFading)
         {
             fadePanel.gameObject.SetActive(true);
         }
 
-        if (finished)
-            return;
+        //if (finished)
+        //    return;
 
-        if (GameActive)
+        if (TimerActive)
         {
             s += Time.deltaTime;
             if (s >= 1)
@@ -107,15 +107,13 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        if (GameActive && Waktu <= 0)
+        if (TimerActive && Waktu <= 0)
         {
-            GameActive = false;
+            TimerActive = false;
             StartCoroutine(GameOverRoutine());
         }
 
         SetText();
-
-       
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -146,10 +144,10 @@ public class UIManager : MonoBehaviour
         isPaused = false;
     }
 
-    public void Finish()
-    {
-        finished = true;
-        textTimer.color = Color.yellow;
-    }
+    //public void Finish()
+    //{
+    //    finished = true;
+    //    textTimer.color = Color.yellow;
+    //}
 
 }

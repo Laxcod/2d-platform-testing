@@ -19,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnHealed;
     public static event Action OnPlayerDeath;
 
+    public bool isGameover;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,13 +55,14 @@ public class PlayerHealth : MonoBehaviour
             {
                 rb.AddForce(new Vector2 (knockbackForceX, knockbackForceY), ForceMode2D.Force);
             }
-
+            Debug.Log("collide");
             // game over
-            if(currentHealth <= 0)
+            if(currentHealth <= 0 && !isGameover)
             {
                 currentHealth = 0;
                 Debug.Log("GAME OVER!");
                 OnPlayerDeath?.Invoke();
+                isGameover = true;
             }
         }
     }
