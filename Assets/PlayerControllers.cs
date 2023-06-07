@@ -133,7 +133,7 @@ public class PlayerControllers : MonoBehaviour
             Jump();
         }
 
-    //   is(Input.GetButton("Jump"))     //error
+       if(Input.GetButtonDown("Jump"))     //error
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpheightMultiplier);
         }
