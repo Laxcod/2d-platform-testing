@@ -3,15 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] TMP_Text textTimer;
+    [SerializeField] float Waktu = 100;
+
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
     public static bool isPaused;
+
+    public bool GameActive = false;
+    private bool finished = false;
+    float s;
+    
+
     public Image fadePanel;
     private bool isFading;
 
+    void SetText()
+    {
+        int Minute = Mathf.FloorToInt(Waktu / 60);
+        int Seconds = Mathf.FloorToInt(Waktu % 60);
+        textTimer.text = Minute.ToString("00") + ":" + Seconds.ToString("00");
+    }
 
     private void OnEnable()
     {
@@ -47,15 +63,9 @@ public class UIManager : MonoBehaviour
         fadePanel.gameObject.SetActive(false);
         isFading = false;
 
-
-
         //isFading = false;
         //fadePanel.CrossFadeAlpha(0f, 1f, true);
         //yield return new WaitForSeconds(1f);
-
-
-
-
 
     }
 
@@ -76,10 +86,36 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+
+        GameActive = true;
+
         if (isFading)
         {
             fadePanel.gameObject.SetActive(true);
         }
+
+        if (finished)
+            return;
+
+        if (GameActive)
+        {
+            s += Time.deltaTime;
+            if (s >= 1)
+            {
+                Waktu--;
+                s = 0;
+            }
+        }
+
+        if (GameActive && Waktu <= 0)
+        {
+            GameActive = false;
+            StartCoroutine(GameOverRoutine());
+        }
+
+        SetText();
+
+       
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -92,6 +128,8 @@ public class UIManager : MonoBehaviour
                 PauseGame();
             }
         }
+
+
     }
 
     public void PauseGame()
@@ -107,4 +145,11 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
+
+    public void Finish()
+    {
+        finished = true;
+        textTimer.color = Color.yellow;
+    }
+
 }
