@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnPlayerDamaged;
     public static event Action OnHealed;
     public static event Action OnPlayerDeath;
-
+    public GameObject deathEffect;
     public bool isGameover;
 
     // Start is called before the first frame update
@@ -59,6 +59,7 @@ public class PlayerHealth : MonoBehaviour
             // game over
             if(currentHealth <= 0 && !isGameover)
             {
+                Instantiate(deathEffect,transform.position,Quaternion.identity);
                 currentHealth = 0;
                 Debug.Log("GAME OVER!");
                 OnPlayerDeath?.Invoke();
