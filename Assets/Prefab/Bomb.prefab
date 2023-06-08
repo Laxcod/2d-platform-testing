@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 7391466768453746266}
   - component: {fileID: -5680854318468392728}
   - component: {fileID: 6391023832368242966}
+  - component: {fileID: 1102469249746182379}
+  - component: {fileID: 4983925664473516615}
+  - component: {fileID: -4560953218867430340}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +87,52 @@ CapsuleCollider2D:
   m_Offset: {x: -0.045782555, y: 0.07368844}
   m_Size: {x: 0.1580741, y: 0.48773068}
   m_Direction: 0
+--- !u!114 &1102469249746182379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250082813379153682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74563a4d9c121ac4ab10f7006772f611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Drop
+  healthPoints: 1
+  speed: 0
+  knockbackForceX: 2
+  knockbackForceY: 2
+  damageToGive: 3
+--- !u!114 &4983925664473516615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250082813379153682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb87613231f4172438976ead0f78c125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 2707724001621652095, guid: 3409beac67a983d4ca88aa14c876047b, type: 3}
+  isDamaged: 0
+--- !u!114 &-4560953218867430340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250082813379153682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83526355abc44b047bfbfb7a6db6af12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  blink: {fileID: 2100000, guid: 062cfebe39aaeb144b98585d1449802d, type: 2}
 --- !u!1 &8103215992068878318
 GameObject:
   m_ObjectHideFlags: 0

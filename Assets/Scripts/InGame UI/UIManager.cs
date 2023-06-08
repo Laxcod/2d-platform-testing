@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
     public static bool isPaused;
-    public PlayerHealth ph;
 
     public bool isGameover;
     public bool TimerActive = false;
