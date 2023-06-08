@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth2 : MonoBehaviour
 {
     Enemy enemy;
     public GameObject deathEffect;
@@ -20,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Weapon" ) &&!isDamaged)
+        if (collision.CompareTag("Bullet" ) &&!isDamaged)
         {
             enemy.healthPoints -= 2f;
             if(collision.transform.position.x < transform.position.x)
