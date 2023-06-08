@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     Animator anim;
+    private bool doubleJump;
 
     private void OnEnable()
     {
@@ -44,12 +45,13 @@ public class PlayerController : MonoBehaviour
 
         FlipCharacter();
         Attack();
+        Jump();
     }
 
     private void FixedUpdate()
     {
         Movement();
-        Jump();
+        
     }
 
     public void Attack()
@@ -66,9 +68,28 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetButton("Jump") && isGrounded)
+        // if (Input.GetButton("Jump") && isGrounded)
+        // {
+        //     rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        // }
+
+        if(isGrounded && !Input.GetButton("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+            doubleJump = false;
+        }
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            if(isGrounded || doubleJump)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+                doubleJump = !doubleJump;
+            }
+        }
+
+        if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.05f);
         }
     }
 
