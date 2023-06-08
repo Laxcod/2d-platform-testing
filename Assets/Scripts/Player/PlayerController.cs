@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
-        
     }
 
     public void Attack()
@@ -68,11 +67,6 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        // if (Input.GetButton("Jump") && isGrounded)
-        // {
-        //     rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-        // }
-
         if(isGrounded && !Input.GetButton("Jump"))
         {
             doubleJump = false;
