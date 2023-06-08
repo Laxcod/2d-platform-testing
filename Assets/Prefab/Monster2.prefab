@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 6813226138515373972}
   - component: {fileID: 6813226138515373982}
   m_Layer: 0
-  m_Name: Monster Idle_0
+  m_Name: DryTrash
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ Animator:
   m_GameObject: {fileID: 6813226138515373153}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ff5c8143a7c273409f347d177c60531, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ff5c8143a7c273409f347d177c60531, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

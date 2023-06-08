@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2707724001621652092}
   - component: {fileID: -8244613894769996604}
   m_Layer: 8
-  m_Name: DryTrashDeath
+  m_Name: WetTrashDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -992976621
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 494030479, guid: c2254165e0a4d45449b920a7217561c0, type: 3}
+  m_Sprite: {fileID: -298043936, guid: 0499238dac587fd4ba3fe848d081556f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 2707724001621652095}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce9aeee0090a31b4299d224126471d4b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 270035ea4d5257e4b97e9ef9a1b97e8a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
