@@ -16,9 +16,7 @@ public class UIManager : MonoBehaviour
 
     public bool isGameover;
     public bool TimerActive = false;
-    private bool finished = false;
     float s;
-    
 
     public Image fadePanel;
     private bool isFading;
@@ -125,8 +123,6 @@ public class UIManager : MonoBehaviour
                 PauseGame();
             }
         }
-
-
     }
 
     public void PauseGame()
@@ -148,5 +144,4 @@ public class UIManager : MonoBehaviour
     //    finished = true;
     //    textTimer.color = Color.yellow;
     //}
-
 }
