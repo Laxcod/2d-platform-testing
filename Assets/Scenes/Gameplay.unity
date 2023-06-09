@@ -1301,6 +1301,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
   moveRange: 2
+--- !u!60 &403604394
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403604376}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 0.51}
+    newSize: {x: 0.78, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.31876296, y: -0.11561844}
+      - {x: 0.16, y: 0.095}
+      - {x: 0.1355671, y: 0.120257884}
+      - {x: 0.045257874, y: 0.20056708}
+      - {x: 0.05711318, y: 0.20139207}
+      - {x: -0.080927655, y: 0.20345391}
+      - {x: -0.18350524, y: 0.09469078}
+      - {x: -0.3014434, y: -0.04737106}
+      - {x: -0.34319603, y: -0.123247296}
+      - {x: -0.3973196, y: -0.1794329}
+      - {x: -0.4369339, y: -0.21799114}
+      - {x: -0.41793805, y: -0.255}
+      - {x: 0.3973197, y: -0.24262893}
+      - {x: 0.3973197, y: -0.22974212}
+      - {x: 0.36894128, y: -0.18425667}
+      - {x: 0.3411342, y: -0.14706184}
 --- !u!1 &433984131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,19 +6395,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2615726405535583378, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_Size.x
-      value: 0.85012454
+      value: 0.3198302
       objectReference: {fileID: 0}
     - target: {fileID: 2615726405535583378, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_Size.y
-      value: 0.48896685
+      value: 0.34267867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615726405535583378, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2615726405535583378, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0099417865
+      value: -0.025942132
       objectReference: {fileID: 0}
     - target: {fileID: 2615726405535583378, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_Offset.y
-      value: -0.024239227
+      value: -0.09738332
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615726405535583381, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2615726405535584105, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_Layer

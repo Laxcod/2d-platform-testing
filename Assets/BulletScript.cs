@@ -26,11 +26,12 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            
+            Debug.Log("Bullet hit enemy!");
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("Bullet hit ground!");
             Destroy(gameObject);
         }
     }
