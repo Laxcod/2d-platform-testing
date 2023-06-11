@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadingManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2080467800436043506, guid: 57dbfadd22eda954395554a6e535d0ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57dbfadd22eda954395554a6e535d0ca, type: 3}
 --- !u!1 &296224586

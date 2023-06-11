@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891162116989457555}
-  - component: {fileID: 7391466768453746266}
   - component: {fileID: -5680854318468392728}
   - component: {fileID: 6391023832368242966}
+  - component: {fileID: 7391466768453746266}
   - component: {fileID: 1102469249746182379}
   - component: {fileID: 4983925664473516615}
   - component: {fileID: -4560953218867430340}
@@ -38,18 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7391466768453746266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4250082813379153682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5ed39f802a931841a3e3c2ecfa9f843, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &-5680854318468392728
 Rigidbody2D:
   serializedVersion: 4
@@ -87,6 +75,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.05261072, y: 0.060601216}
   m_Size: {x: 0.06411369, y: 0.3249932}
   m_Direction: 0
+--- !u!114 &7391466768453746266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250082813379153682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ed39f802a931841a3e3c2ecfa9f843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1102469249746182379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb87613231f4172438976ead0f78c125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 2707724001621652095, guid: 3409beac67a983d4ca88aa14c876047b, type: 3}
+  deathEffect: {fileID: 2707724001621652095, guid: ab22ab2b493cba04d9846bfc89360581, type: 3}
   isDamaged: 0
 --- !u!114 &-4560953218867430340
 MonoBehaviour:
