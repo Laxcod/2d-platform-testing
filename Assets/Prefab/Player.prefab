@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771680364cb1f7d42a7afa3793fa6248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 143929949946814422, guid: f9509157db3ffaf43a9b9f5531514480, type: 3}
+  bullet: {fileID: 143929949946814422, guid: 7ff5c8143a7c273409f347d177c60531, type: 3}
   bulletTransform: {fileID: 6169342936887368507}
   canFire: 0
   timeBetweenFiring: 0.3
@@ -354,6 +354,7 @@ MonoBehaviour:
   imunityTime: 0.5
   knockbackForceX: 1000
   knockbackForceY: 100
+  deathEffect: {fileID: 2707724001621652095, guid: 615416fbd07d05d49b81ffb4595afb91, type: 3}
   isGameover: 0
 --- !u!95 &6169342936666645872
 Animator:
@@ -400,6 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6169342936887368507}
   - component: {fileID: 6169342936887368506}
+  - component: {fileID: 8195405333931600623}
   m_Layer: 8
   m_Name: BulletTransform
   m_TagString: Untagged
@@ -416,7 +418,7 @@ Transform:
   m_GameObject: {fileID: 6169342936887368484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.643, y: 0.29, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.07711762, y: 0.07711762, z: 0.07711762}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6169342936341691313}
@@ -463,8 +465,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 1076008252, guid: 6574a63cffaabaa4c9798173cf365a38, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -474,3 +476,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &8195405333931600623
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6169342936887368484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 87918e309933a3a4aa1a13415fb81628, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

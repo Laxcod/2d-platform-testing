@@ -760,7 +760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1775868996, guid: 7b5ab0106b6959449b9fa55a8dca8384, type: 3}
+  m_Sprite: {fileID: 548887596, guid: 5bc0cf64f52b3e249a770d326ce0418c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1189,7 +1189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1174806, y: 1.04, z: -10.017887}
+  m_LocalPosition: {x: -1.1174806, y: 1.4729999, z: -10.017887}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -893854071, guid: 7b5ab0106b6959449b9fa55a8dca8384, type: 3}
+  m_Sprite: {fileID: -2099739439, guid: 5bc0cf64f52b3e249a770d326ce0418c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2618,7 +2618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1085470924, guid: 7b5ab0106b6959449b9fa55a8dca8384, type: 3}
+  m_Sprite: {fileID: 278653520, guid: f088666dcb8e77b4a95fc174c20c3948, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3559,9 +3559,17 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6169342936666645878, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169342936666645878, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
       propertyPath: deathEffect
       value: 
       objectReference: {fileID: 2707724001621652095, guid: 615416fbd07d05d49b81ffb4595afb91, type: 3}
+    - target: {fileID: 6169342936666645878, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
+      propertyPath: currentHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6169342936666645884, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3609,6 +3617,10 @@ PrefabInstance:
     - target: {fileID: 6169342936666645886, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
       propertyPath: m_Name
       value: 'Player '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663873008380367491, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7f489a56d6b4a42ab4c6b72128c1b5, type: 3}
