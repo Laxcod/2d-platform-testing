@@ -4498,6 +4498,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304749136}
   m_CullTransparentMesh: 1
+--- !u!4 &1337186747 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5349675022808307795, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+  m_PrefabInstance: {fileID: 2278880372942787192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1375783909
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,6 +6533,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5349675021126818370, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 1337186747}
+    - target: {fileID: 5349675021126818370, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: wallHopForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349675021126818370, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: wallJumpForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349675021126818370, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: wallSlideSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349675021126818370, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: wallcheckDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349675021126818370, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: movementForceInAir
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349675021126818371, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3d74fe7b53310a64cbd4d400e9c38d62, type: 2}
     - target: {fileID: 5349675021126818380, guid: bd6100bfbfddf5142b328e10f255c82b, type: 3}
       propertyPath: m_RootOrder
       value: 2
