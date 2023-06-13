@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
+    public GameObject howToPlayMenu;
     public static bool isPaused;
 
     public bool isGameover;
@@ -71,6 +72,7 @@ public class UIManager : MonoBehaviour
     public void RestartLevel()
     {
         pauseMenu.SetActive(false);
+        howToPlayMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -85,6 +87,7 @@ public class UIManager : MonoBehaviour
     {
         TimerActive = true;
         pauseMenu.SetActive(false);
+        howToPlayMenu.SetActive(false);
     }
 
     private void Update()
@@ -126,6 +129,34 @@ public class UIManager : MonoBehaviour
                 PauseGame();
             }
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (isPaused)
+            {
+                Resume2();
+            }
+            else
+            {
+                HowToPlay();
+            }
+        }
+    }
+
+
+    public void HowToPlay()
+    {
+        howToPlayMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void Resume2()
+    {
+        howToPlayMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void PauseGame()
@@ -142,9 +173,4 @@ public class UIManager : MonoBehaviour
         isPaused = false;
     }
 
-    //public void Finish()
-    //{
-    //    finished = true;
-    //    textTimer.color = Color.yellow;
-    //}
 }
