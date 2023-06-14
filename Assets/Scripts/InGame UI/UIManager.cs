@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
     public GameObject howToPlayMenu;
+    public GameObject settings;
     public static bool isPaused;
 
     public bool isGameover;
@@ -76,6 +77,22 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void OpenSettings()
+    {
+        pauseMenu.SetActive(false);
+        settings.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void ExitSettings()
+    {
+        pauseMenu.SetActive(true);
+        settings.SetActive(false);
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
     //public void MainMenu()
