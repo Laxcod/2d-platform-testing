@@ -147,7 +147,6 @@ public class UIManager : MonoBehaviour
             }
         }
 
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (isPaused)
@@ -160,7 +159,6 @@ public class UIManager : MonoBehaviour
             }
         }
     }
-
 
     public void HowToPlay()
     {

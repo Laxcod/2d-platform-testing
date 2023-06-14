@@ -10,6 +10,12 @@ public class EnemyHealth : MonoBehaviour
     SpriteRenderer sprite;
     Blink material;
     Rigidbody2D rb;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -38,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 Instantiate(deathEffect,transform.position,Quaternion.identity);
                 Destroy(gameObject);
+                audioManager.PlaySFX(audioManager.dryEnemyDeath);
             }
         }
     }

@@ -13,6 +13,12 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     Animator anim;
     private bool doubleJump;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void OnEnable()
     {
@@ -58,6 +64,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             anim.SetBool("Attack", true);
+            audioManager.PlaySFX(audioManager.playerAtkSword);
         }
         else
         {
@@ -74,6 +81,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump"))
         {
+            audioManager.PlaySFX(audioManager.playerJump);
             if(isGrounded || doubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
@@ -96,6 +104,7 @@ public class PlayerController : MonoBehaviour
         if(rb.velocity.x != 0)
         {
             anim.SetBool("Walk", true);
+            audioManager.PlaySFX(audioManager.playerWalk);
         }
         else
         {

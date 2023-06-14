@@ -11,6 +11,12 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -43,6 +49,7 @@ public class Shooting : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            audioManager.PlaySFX(audioManager.playerAtkShot);
         }
     }
 }
