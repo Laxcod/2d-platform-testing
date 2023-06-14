@@ -22,17 +22,30 @@ public class BulletScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag =="Enemy")
+        if (collision.CompareTag("Enemy"))
         {
             Debug.Log("Bullet hit enemy!");
-            Destroy(gameObject);
+            DestroyBullet();
         }
-        else if (collision.gameObject.CompareTag("Ground"))
+        else if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Bullet hit player!");
+
+            GetComponent<BoxCollider2D>().isTrigger = true;
+
+        }
+        else if (collision.CompareTag("Ground"))
         {
             Debug.Log("Bullet hit ground!");
-            Destroy(gameObject);
+
+            DestroyBullet();
         }
+    }
+
+    private void DestroyBullet()
+    {
+        Destroy(gameObject);
     }
 }
