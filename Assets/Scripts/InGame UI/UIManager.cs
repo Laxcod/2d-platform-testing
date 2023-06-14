@@ -186,6 +186,7 @@ public class UIManager : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        settings.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
