@@ -48,17 +48,17 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void MuteSound()
-    {
-        if(bgmAudio.mute == false && sfxAudio.mute == false)
-        {
-            bgmAudio.mute = true;
-            sfxAudio.mute = true;
-        }
-        else
-        {
-            bgmAudio.mute = false;
-            sfxAudio.mute = false;
-        }
-    }
+    //public void MuteSound()
+    //{
+    //    if(bgmAudio.mute == false && sfxAudio.mute == false)
+    //    {
+    //        bgmAudio.mute = true;
+    //        sfxAudio.mute = true;
+    //    }
+    //    else
+    //    {
+    //        bgmAudio.mute = false;
+    //        sfxAudio.mute = false;
+    //    }
+    //}
 }

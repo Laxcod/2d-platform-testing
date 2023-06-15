@@ -5112,6 +5112,8 @@ GameObject:
   - component: {fileID: 1743047056}
   - component: {fileID: 1743047055}
   - component: {fileID: 1743047054}
+  - component: {fileID: 1743047059}
+  - component: {fileID: 1743047058}
   - component: {fileID: 1743047057}
   m_Layer: 0
   m_Name: Flowchart
@@ -5133,11 +5135,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 196.08487, y: -70.17788}
+  scrollPos: {x: 211.65652, y: -65.6784}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 0.94000006
+  blockViewHeight: 387
+  zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5175,7 +5177,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1.3181566
     y: 136.33687
-    width: 76.59574
+    width: 76.13636
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5196,6 +5198,8 @@ MonoBehaviour:
   - {fileID: 1743047056}
   - {fileID: 1743047054}
   - {fileID: 1743047055}
+  - {fileID: 1743047059}
+  - {fileID: 1743047058}
   - {fileID: 1743047057}
   suppressAllAutoSelections: 0
 --- !u!4 &1743047043
@@ -5369,7 +5373,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 1
+    floatVal: 2
   durationOLD: 0
 --- !u!114 &1743047050
 MonoBehaviour:
@@ -5556,7 +5560,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 223365890}
 --- !u!114 &1743047057
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5566,13 +5570,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 66
+  itemId: 69
   indentLevel: 0
   _sceneName:
     stringRef: {fileID: 0}
     stringVal: MainMenu
   loadingImage: {fileID: 2800000, guid: ee44d27042c039b4f83f7e5242ab104b, type: 3}
   sceneNameOLD: 
+--- !u!114 &1743047058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743047039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 68
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &1743047059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743047039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1 &1864045547
 GameObject:
   m_ObjectHideFlags: 0

@@ -69,6 +69,7 @@ public class PlayerHealth : MonoBehaviour
                 audioManager.PlaySFX(audioManager.gameOver);
                 Instantiate(deathEffect,transform.position,Quaternion.identity);
                 currentHealth = 0;
+                gameObject.SetActive(false);
                 Debug.Log("GAME OVER!");
                 OnPlayerDeath?.Invoke();
                 isGameover = true;

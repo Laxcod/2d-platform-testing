@@ -3430,7 +3430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTimer: {fileID: 1965693909}
-  Waktu: 100
+  Waktu: 60
   gameOverMenu: {fileID: 1837975127}
   pauseMenu: {fileID: 798331179}
   howToPlayMenu: {fileID: 1905920238}
@@ -7069,7 +7069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8975977624559930136, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -0.037
       objectReference: {fileID: 0}
     - target: {fileID: 8975977624559930136, guid: 47237f6633d81b94a8759ede307b423a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7311,7 +7311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3110785042631297209, guid: 7f49b977982f29747ba10dfc5205755c, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3110785042631297209, guid: 7f49b977982f29747ba10dfc5205755c, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -7335,7 +7335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3110785042631297209, guid: 7f49b977982f29747ba10dfc5205755c, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonMute
+      value: Mute
       objectReference: {fileID: 0}
     - target: {fileID: 3110785042631297209, guid: 7f49b977982f29747ba10dfc5205755c, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName

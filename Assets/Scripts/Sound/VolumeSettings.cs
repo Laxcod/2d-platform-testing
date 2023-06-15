@@ -62,8 +62,27 @@ public class VolumeSettings : MonoBehaviour
         sfxVolText.text = Mathf.RoundToInt(value * 100).ToString();
     }
 
-    public void ButtonMute()
+    void OnEnable()
     {
-        AudioManager.instance.MuteSound();
+        AudioListener.volume = PlayerPrefs.GetFloat("volume", 0);
+    }
+
+    void OnDisable()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("volume", 1);
+    }
+
+    public void Mute(bool value)
+    {
+        if (value)
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("volume", 0);
+        }
+        else
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("volume", 1);
+        }
+        PlayerPrefs.SetFloat("volume", AudioListener.volume);
+        PlayerPrefs.Save();
     }
 }
