@@ -106,7 +106,6 @@ public class PlayerController : MonoBehaviour
         if(rb.velocity.x != 0)
         {
             anim.SetBool("Walk", true);
-            audioManager.PlaySFX(audioManager.playerWalk);
         }
         else
         {
