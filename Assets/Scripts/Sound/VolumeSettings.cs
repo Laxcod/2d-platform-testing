@@ -37,7 +37,7 @@ public class VolumeSettings : MonoBehaviour
 
     public void SetSfxVolume()
     {
-        float volume = bgmSlider.value;
+        float volume = sfxSlider.value;
         myMixer.SetFloat("SFX", Mathf.Log10(volume)*20);
         PlayerPrefs.SetFloat("sfxVolume", volume);
         SetSfxVolText(sfxSlider.value);
@@ -72,15 +72,15 @@ public class VolumeSettings : MonoBehaviour
         AudioListener.volume = PlayerPrefs.GetFloat("volume", 1);
     }
 
-    public void Mute(bool value)
+    public void MuteSound(bool value)
     {
-        if (value)
+        if(value)
         {
-            AudioListener.volume = PlayerPrefs.GetFloat("volume", 0);
+            AudioListener.volume = 0;
         }
         else
         {
-            AudioListener.volume = PlayerPrefs.GetFloat("volume", 1);
+            AudioListener.volume = 1;
         }
         PlayerPrefs.SetFloat("volume", AudioListener.volume);
         PlayerPrefs.Save();

@@ -1479,7 +1479,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 651576546}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
-        m_MethodName: Mute
+        m_MethodName: MuteSound
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

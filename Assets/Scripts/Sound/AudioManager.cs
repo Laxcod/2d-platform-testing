@@ -47,18 +47,4 @@ public class AudioManager : MonoBehaviour
             bgmAudio.Play();
         }
     }
-
-    //public void MuteSound()
-    //{
-    //    if(bgmAudio.mute == false && sfxAudio.mute == false)
-    //    {
-    //        bgmAudio.mute = true;
-    //        sfxAudio.mute = true;
-    //    }
-    //    else
-    //    {
-    //        bgmAudio.mute = false;
-    //        sfxAudio.mute = false;
-    //    }
-    //}
 }
