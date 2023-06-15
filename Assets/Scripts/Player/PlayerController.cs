@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
+            audioManager.PlaySFX(audioManager.playerAtkSword);
             anim.SetBool("Attack", true);
             audioManager.PlaySFX(audioManager.playerAtkSword);
         }
@@ -84,6 +85,7 @@ public class PlayerController : MonoBehaviour
             audioManager.PlaySFX(audioManager.playerJump);
             if(isGrounded || doubleJump)
             {
+                audioManager.PlaySFX(audioManager.playerJump);
                 rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
                 doubleJump = !doubleJump;
             }

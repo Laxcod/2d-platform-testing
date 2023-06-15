@@ -47,6 +47,7 @@ public class Shooting : MonoBehaviour
 
         if(Input.GetMouseButton(0) && canFire)
         {
+            audioManager.PlaySFX(audioManager.playerAtkShot);
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             audioManager.PlaySFX(audioManager.playerAtkShot);

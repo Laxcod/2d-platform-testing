@@ -66,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
             // game over
             if(currentHealth <= 0 && !isGameover)
             {
+                audioManager.PlaySFX(audioManager.gameOver);
                 Instantiate(deathEffect,transform.position,Quaternion.identity);
                 currentHealth = 0;
                 Debug.Log("GAME OVER!");
@@ -94,7 +95,7 @@ public class PlayerHealth : MonoBehaviour
     {
         isImune = true;
         sprite.material = material.blink;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.8f);
         sprite.material = material.original;
         isImune = false;
     }

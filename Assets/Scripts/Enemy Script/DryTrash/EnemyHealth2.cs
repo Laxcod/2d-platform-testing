@@ -42,6 +42,7 @@ public class EnemyHealth2 : MonoBehaviour
 
             if (enemy.healthPoints <= 0)
             {
+                audioManager.PlaySFX(audioManager.dryEnemyDeath);
                 Instantiate(deathEffect,transform.position,Quaternion.identity);
                 Destroy(gameObject);
                 audioManager.PlaySFX(audioManager.wetEnemyDeath);
