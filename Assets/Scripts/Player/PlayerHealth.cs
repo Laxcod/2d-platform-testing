@@ -20,6 +20,12 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnPlayerDeath;
     public GameObject deathEffect;
     public bool isGameover;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.CompareTag("Enemy") && !isImune)
         {
+            audioManager.PlaySFX(audioManager.playerDamaged);
             currentHealth = Mathf.Clamp(currentHealth - collision.GetComponent<Enemy>().damageToGive, 0, maxHealth);
             OnPlayerDamaged?.Invoke();
             StartCoroutine(Imunity());
@@ -59,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
             // game over
             if(currentHealth <= 0 && !isGameover)
             {
+                audioManager.PlaySFX(audioManager.gameOver);
                 Instantiate(deathEffect,transform.position,Quaternion.identity);
                 currentHealth = 0;
                 Debug.Log("GAME OVER!");

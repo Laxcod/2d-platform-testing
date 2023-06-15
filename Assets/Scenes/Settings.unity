@@ -617,6 +617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 651576544}
   - component: {fileID: 651576545}
+  - component: {fileID: 651576546}
   m_Layer: 5
   m_Name: Vertical
   m_TagString: Untagged
@@ -673,6 +674,24 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &651576546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651576543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a0eff19196c4a49a6ead9f925af3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 24100000, guid: 056b0a844ae209447a95f6f4ee2b4ef0, type: 2}
+  bgmSlider: {fileID: 1378512399}
+  sfxSlider: {fileID: 1506051468}
+  bgmVolText: {fileID: 1502879083}
+  sfxVolText: {fileID: 700830938}
+  muteToggle: {fileID: 0}
 --- !u!1 &670064820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,8 +1476,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 651576546}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: ButtonMute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &1290592251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1702,7 @@ GameObject:
   - component: {fileID: 1378512398}
   - component: {fileID: 1378512399}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BGM Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1744,13 +1775,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 2031428680}
   m_HandleRect: {fileID: 1727507575}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 651576546}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetBgmVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1502879081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,7 +1940,7 @@ GameObject:
   - component: {fileID: 1506051467}
   - component: {fileID: 1506051468}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SFX Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1970,13 +2013,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 2131813533}
   m_HandleRect: {fileID: 706652321}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 651576546}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetSfxVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1727507574
 GameObject:
   m_ObjectHideFlags: 0

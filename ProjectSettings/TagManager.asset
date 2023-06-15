@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Ground
   - Bullet
+  - Laser
+  - Audio
   layers:
   - Default
   - TransparentFX
