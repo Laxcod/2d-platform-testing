@@ -85,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
     {
         isImune = true;
         sprite.material = material.blink;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.8f);
         sprite.material = material.original;
         isImune = false;
     }
