@@ -5148,8 +5148,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1743047041}
-  selectedCommands:
-  - {fileID: 1743047057}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -5560,7 +5559,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 223365890}
 --- !u!114 &1743047057
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5579,7 +5578,7 @@ MonoBehaviour:
   sceneNameOLD: 
 --- !u!114 &1743047058
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5599,7 +5598,7 @@ MonoBehaviour:
   fadeTweenType: 4
 --- !u!114 &1743047059
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
