@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: WetTrash
-  healthPoints: 10
+  healthPoints: 4
   speed: 0
   knockbackForceX: 2
   knockbackForceY: 2

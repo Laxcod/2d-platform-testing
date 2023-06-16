@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: DryTrash
-  healthPoints: 10
+  healthPoints: 6
   speed: 0
   knockbackForceX: 2
   knockbackForceY: 2
