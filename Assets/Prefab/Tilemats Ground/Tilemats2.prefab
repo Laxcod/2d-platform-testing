@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7440752507271078039}
   - component: {fileID: 4309620284721675243}
   - component: {fileID: 906372180460501376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemats_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5649440482027775882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemats2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 1562044167363192793}
   - component: {fileID: 4713317032176875055}
   - component: {fileID: 2242548198309534559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemats_2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -267,9 +267,9 @@ GameObject:
   - component: {fileID: 262133413379156941}
   - component: {fileID: 9015459722960132081}
   - component: {fileID: 4896296339762494099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemats_1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
