@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay 3.unity
     guid: 548f45b64c699af40be84ba40fb346ea
   - enabled: 1
+    path: Assets/Scenes/Gameplay 4.unity
+    guid: 5ba572c4f85ed814fbfa463ff5247aa1
+  - enabled: 1
     path: Assets/Scenes/Chapter1-End.unity
     guid: 82ba1524b8de4e046a8f64eed1a71416
   - enabled: 1
