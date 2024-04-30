@@ -16,7 +16,7 @@ public class ChangeScene2 : MonoBehaviour
     {
         fadeInOut.FadeIn();
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Chapter1-End");
+        SceneManager.LoadScene("Chapter2-End");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

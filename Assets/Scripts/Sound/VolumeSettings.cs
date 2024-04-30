@@ -25,6 +25,8 @@ public class VolumeSettings : MonoBehaviour
             SetBgmVolume();
             SetSfxVolume();
         }
+
+        muteToggle.isOn = PlayerPrefs.GetFloat("volume") == 0 ? true : false;
     }
 
     public void SetBgmVolume()

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 576423db69b12a74599b914873ff914e
+guid: 8a7abe1bff7939f42b3b45ac35c167bc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -108,19 +132,40 @@ TextureImporter:
       name: Chapter_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 24
+        x: 153
+        y: 20
         width: 636
         height: 552
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5252e2965a73fec42a1559425af3bf7c
-      internalID: 10692091
+      spriteID: 611fef2c8e28bda488751b9795fb0449
+      internalID: -1539386073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter_5
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 492
+        width: 331
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54ccaad06e9f6c4491bc489526c90c7
+      internalID: -1979093149
       vertices: []
       indices: 
       edges: []
@@ -129,19 +174,19 @@ TextureImporter:
       name: Chapter_1
       rect:
         serializedVersion: 2
-        x: 997
-        y: 436
+        x: 942
+        y: 397
         width: 331
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f32ca27efba18a4a96bab9331bcdd49
-      internalID: -761340214
+      spriteID: a122d93184867c54389b549a02e89b19
+      internalID: 2114434365
       vertices: []
       indices: 
       edges: []
@@ -150,19 +195,61 @@ TextureImporter:
       name: Chapter_2
       rect:
         serializedVersion: 2
-        x: 989
-        y: 306
+        x: 942
+        y: 303
         width: 331
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25f2d5da0fe7f41459400fea81288c34
-      internalID: -1618296509
+      spriteID: 7c9524d54602f544494b062ca28ed554
+      internalID: 457773585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter_3
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 207
+        width: 331
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ede56a469d05a4f90277292fd3364d
+      internalID: -1958828973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter_4
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 111
+        width: 331
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ac9d9f3776bbb42b2f9748835d2a88
+      internalID: -1222378431
       vertices: []
       indices: 
       edges: []
@@ -178,9 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chapter_0: 10692091
-      Chapter_1: -761340214
-      Chapter_2: -1618296509
+      Chapter_0: -1539386073
+      Chapter_1: 2114434365
+      Chapter_2: 457773585
+      Chapter_3: -1958828973
+      Chapter_4: -1222378431
+      Chapter_5: -1979093149
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

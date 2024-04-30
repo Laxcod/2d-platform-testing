@@ -6821,7 +6821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTimer: {fileID: 1965693909}
-  Waktu: 180
+  Waktu: 240
   gameOverMenu: {fileID: 1837975127}
   pauseMenu: {fileID: 798331179}
   howToPlayMenu: {fileID: 1905920238}

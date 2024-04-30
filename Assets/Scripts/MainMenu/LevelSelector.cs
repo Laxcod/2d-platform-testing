@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Fungus;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,21 @@ public class LevelSelector : MonoBehaviour
     public GameObject scrollBar;
     float scrollPos = 0;
     float[]pos;
+    public Button[] chapter;
+
+    private void Awake()
+    {
+        int unlockedChapter = PlayerPrefs.GetInt("UnlockedChapter", 1);
+        for (int i = 0; i < chapter.Length; i++)
+        {
+            chapter[i].interactable = false;
+        }
+
+        for (int i = 0; i < unlockedChapter; i++)
+        {
+            chapter[i].interactable = true;
+        }
+    }
 
     // Update is called once per frame
     void Update()

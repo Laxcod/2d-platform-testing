@@ -1504,7 +1504,7 @@ GameObject:
   - component: {fileID: 453207221}
   - component: {fileID: 453207220}
   m_Layer: 0
-  m_Name: View1
+  m_Name: View2
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1551,7 +1551,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 89290bad802f87b4bb0ec555b33f40f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1584711a663de5541ae679efc8f9bea4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1570,8 +1570,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453207219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.01, z: 0}
-  m_LocalScale: {x: 1.6261576, y: 1.38673, z: 1.38673}
+  m_LocalPosition: {x: 0.23, y: -0.01, z: 0}
+  m_LocalScale: {x: 1.38673, y: 1.38673, z: 1.38673}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: ???
-  nameColor: {r: 1, g: 0.52156866, b: 0.1254902, a: 1}
+  nameColor: {r: 0.7570727, g: 1, b: 0.5981132, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 250a4ffb04432a840b2ee7086c6536e6, type: 3}
@@ -4898,16 +4898,11 @@ GameObject:
   - component: {fileID: 1743047041}
   - component: {fileID: 1743047051}
   - component: {fileID: 1743047049}
-  - component: {fileID: 1743047048}
   - component: {fileID: 1743047059}
   - component: {fileID: 1743047058}
   - component: {fileID: 1743047057}
-  - component: {fileID: 1743047064}
-  - component: {fileID: 1743047063}
-  - component: {fileID: 1743047062}
   - component: {fileID: 1743047061}
-  - component: {fileID: 1743047060}
-  - component: {fileID: 1743047065}
+  - component: {fileID: 1743047062}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -4942,7 +4937,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1743047041}
   selectedCommands:
-  - {fileID: 1743047049}
+  - {fileID: 1743047062}
   variables: []
   description: 
   stepPause: 0
@@ -4980,13 +4975,8 @@ MonoBehaviour:
   eventHandler: {fileID: 1743047051}
   commandList:
   - {fileID: 1743047049}
-  - {fileID: 1743047064}
-  - {fileID: 1743047048}
-  - {fileID: 1743047063}
-  - {fileID: 1743047062}
   - {fileID: 1743047061}
-  - {fileID: 1743047060}
-  - {fileID: 1743047065}
+  - {fileID: 1743047062}
   - {fileID: 1743047059}
   - {fileID: 1743047058}
   - {fileID: 1743047057}
@@ -5006,34 +4996,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1743047048
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743047039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 59
-  indentLevel: 0
-  storyText: "Huffttt\u2026. Untungnya aku menemukan senjata. Jadi, aku bisa memusnahkan
-    monster tadi."
-  description: 
-  character: {fileID: 970449104}
-  portrait: {fileID: 21300000, guid: 250a4ffb04432a840b2ee7086c6536e6, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 125309147}
 --- !u!114 &1743047049
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5082,7 +5044,7 @@ MonoBehaviour:
   indentLevel: 0
   _sceneName:
     stringRef: {fileID: 0}
-    stringVal: Chapter2-Start
+    stringVal: Chapter3-Start
   loadingImage: {fileID: 2800000, guid: ee44d27042c039b4f83f7e5242ab104b, type: 3}
   sceneNameOLD: 
 --- !u!114 &1743047058
@@ -5125,36 +5087,6 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
---- !u!114 &1743047060
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743047039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 74
-  indentLevel: 0
-  display: 2
-  stage: {fileID: 0}
-  character: {fileID: 970449104}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
 --- !u!114 &1743047061
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5169,10 +5101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 73
   indentLevel: 0
-  storyText: Apakah itu monster baru?
+  storyText: 'Dengan kemampuan yang dimiliki The Commander, semua junkcrawlers yang
+    ada sudah diatasi dengan mudahnya oleh The Commander seorang diri. '
   description: 
-  character: {fileID: 970449104}
-  portrait: {fileID: 21300000, guid: 250a4ffb04432a840b2ee7086c6536e6, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5181,94 +5114,10 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 125309147}
+  setSayDialog: {fileID: 223365890}
 --- !u!114 &1743047062
 MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743047039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 72
-  indentLevel: 0
-  storyText: Mengapa aku baru melihatnya?
-  description: 
-  character: {fileID: 970449104}
-  portrait: {fileID: 21300000, guid: 250a4ffb04432a840b2ee7086c6536e6, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 125309147}
---- !u!114 &1743047063
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743047039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 71
-  indentLevel: 0
-  storyText: Tapi, yang tadi itu jenis monster apa?
-  description: 
-  character: {fileID: 970449104}
-  portrait: {fileID: 21300000, guid: 250a4ffb04432a840b2ee7086c6536e6, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 125309147}
---- !u!114 &1743047064
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743047039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 70
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 970449104}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 250a4ffb04432a840b2ee7086c6536e6, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 2001893407}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
---- !u!114 &1743047065
-MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5278,7 +5127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 75
+  itemId: 74
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
