@@ -63,11 +63,6 @@ public class UIManager : MonoBehaviour
 
         fadePanel.gameObject.SetActive(false);
         isFading = false;
-
-        //isFading = false;
-        //fadePanel.CrossFadeAlpha(0f, 1f, true);
-        //yield return new WaitForSeconds(1f);
-
     }
 
     public void RestartLevel()
@@ -95,11 +90,6 @@ public class UIManager : MonoBehaviour
         isPaused = true;
     }
 
-    //public void MainMenu()
-    //{
-    //    SceneManager.LoadScene("MainMenu");
-    //}
-
     private void Start()
     {
         TimerActive = true;
@@ -113,9 +103,6 @@ public class UIManager : MonoBehaviour
         {
             fadePanel.gameObject.SetActive(true);
         }
-
-        //if (finished)
-        //    return;
 
         if (TimerActive)
         {
@@ -147,12 +134,11 @@ public class UIManager : MonoBehaviour
             }
         }
 
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (isPaused)
             {
-                Resume2();
+                ResumeTab();
             }
             else
             {
@@ -161,7 +147,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
     public void HowToPlay()
     {
         howToPlayMenu.SetActive(true);
@@ -169,7 +154,7 @@ public class UIManager : MonoBehaviour
         isPaused = true;
     }
 
-    public void Resume2()
+    public void ResumeTab()
     {
         howToPlayMenu.SetActive(false);
         Time.timeScale = 1f;
@@ -190,5 +175,4 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
-
 }
