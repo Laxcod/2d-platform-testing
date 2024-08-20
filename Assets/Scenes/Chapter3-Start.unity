@@ -6156,7 +6156,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1474505478}
   selectedCommands:
-  - {fileID: 1474505697}
+  - {fileID: 1474505666}
   variables: []
   description: 
   stepPause: 0
@@ -6317,7 +6317,7 @@ MonoBehaviour:
   _sceneName:
     stringRef: {fileID: 0}
     stringVal: Gameplay 3
-  loadingImage: {fileID: 2800000, guid: ee44d27042c039b4f83f7e5242ab104b, type: 3}
+  loadingImage: {fileID: 2800000, guid: 2cab424fb679f3b428233e93e18bfcea, type: 3}
   sceneNameOLD: 
 --- !u!114 &1474505667
 MonoBehaviour:
